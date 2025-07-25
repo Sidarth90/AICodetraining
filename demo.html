@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Offers - Demo UI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .deal-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .deal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .cheapest-badge {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .price-highlight {
+            background: linear-gradient(45deg, #10b981, #059669);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-center">
+                <i class="fas fa-car text-3xl mr-3"></i>
+                <h1 class="text-3xl font-bold">Car Rental Offers - Marseille</h1>
+            </div>
+            <p class="text-center mt-2 text-blue-100">🗓️ Tomorrow (2024-12-28) → Dec 30, 2024 | 📍 Marseille, France</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Search Summary -->
+        <div class="max-w-4xl mx-auto mb-8">
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <i class="fas fa-search text-blue-600 mr-2"></i>
+                        <span class="text-blue-800 font-medium">Search Results: 7 cars found</span>
+                    </div>
+                    <div class="text-blue-600 text-sm">
+                        <i class="fas fa-clock mr-1"></i>
+                        Updated just now
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BEST DEAL HIGHLIGHT -->
+        <div class="max-w-4xl mx-auto mb-8">
+            <div class="bg-white rounded-lg card-shadow p-6 border-l-4 border-green-500">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">🏆 Best Deal Found!</h3>
+                    <span class="cheapest-badge text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        CHEAPEST
+                    </span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Budget</h4>
+                        <p class="text-gray-600 mb-2">Economy - Fiat Panda</p>
+                        <p class="text-gray-600 mb-2"><i class="fas fa-map-marker-alt mr-1"></i>Marseille City Center</p>
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span class="text-gray-600">3.9/5.0</span>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-4xl font-bold price-highlight mb-2">
+                            €78.90
+                        </div>
+                        <p class="text-gray-600 mb-4">Total for 2 days</p>
+                        <div class="flex flex-wrap justify-end gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Air Conditioning</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Manual Transmission</span>
+                        </div>
+                        <button class="mt-4 bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold transition duration-300">
+                            <i class="fas fa-check-circle mr-2"></i>Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ALL OFFERS GRID -->
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">
+                <i class="fas fa-cars mr-2"></i>All Available Cars
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Deal 1 - Budget (Cheapest) -->
+                <div class="deal-card bg-white rounded-lg card-shadow p-6 border-2 border-green-500">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-lg font-semibold text-gray-800">Budget</h4>
+                        <span class="bg-green-500 text-white px-2 py-1 rounded text-xs">BEST</span>
+                    </div>
+                    <div class="text-center mb-4">
+                        <i class="fas fa-car text-4xl text-blue-500 mb-2"></i>
+                        <p class="text-gray-600 mb-2">Economy - Fiat Panda</p>
+                    </div>
+                    <p class="text-gray-600 mb-2"><i class="fas fa-map-marker-alt mr-1"></i>Marseille City Center</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span class="text-gray-600">3.9/5.0</span>
+                        </div>
+                        <div class="text-xl font-bold text-green-600">€78.90</div>
+                    </div>
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Air Conditioning</span>
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Manual</span>
+                    </div>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition duration-300">
+                        Select This Car
+                    </button>
+                </div>
+
+                <!-- Deal 2 - Avis -->
+                <div class="deal-card bg-white rounded-lg card-shadow p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-lg font-semibold text-gray-800">Avis</h4>
+                        <span class="bg-orange-500 text-white px-2 py-1 rounded text-xs">2ND</span>
+                    </div>
+                    <div class="text-center mb-4">
+                        <i class="fas fa-car text-4xl text-blue-500 mb-2"></i>
+                        <p class="text-gray-600 mb-2">Economy - Citroën C1</p>
+                    </div>
+                    <p class="text-gray-600 mb-2"><i class="fas fa-map-marker-alt mr-1"></i>Marseille Saint-Charles Station</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span class="text-gray-600">4.1/5.0</span>
+                        </div>
+                        <div class="text-xl font-bold text-blue-600">€82.30</div>
+                    </div>
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">A/C</span>
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Manual</span>
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">GPS</span>
+                    </div>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition duration-300">
+                        Select This Car
+                    </button>
+                </div>
+
+                <!-- Deal 3 - Sixt -->
+                <div class="deal-card bg-white rounded-lg card-shadow p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-lg font-semibold text-gray-800">Sixt</h4>
+                        <span class="bg-yellow-500 text-white px-2 py-1 rounded text-xs">3RD</span>
+                    </div>
+                    <div class="text-center mb-4">
+                        <i class="fas fa-car text-4xl text-blue-500 mb-2"></i>
+                        <p class="text-gray-600 mb-2">Economy - Smart ForTwo</p>
+                    </div>
+                    <p class="text-gray-600 mb-2"><i class="fas fa-map-marker-alt mr-1"></i>Marseille Airport</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span class="text-gray-600">4.3/5.0</span>
+                        </div>
+                        <div class="text-xl font-bold text-blue-600">€86.70</div>
+                    </div>
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">A/C</span>
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Automatic</span>
+                    </div>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition duration-300">
+                        Select This Car
+                    </button>
+                </div>
+
+                <!-- Deal 4 - Europcar -->
+                <div class="deal-card bg-white rounded-lg card-shadow p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-lg font-semibold text-gray-800">Europcar</h4>
+                    </div>
+                    <div class="text-center mb-4">
+                        <i class="fas fa-car text-4xl text-blue-500 mb-2"></i>
+                        <p class="text-gray-600 mb-2">Economy - Peugeot 108</p>
+                    </div>
+                    <p class="text-gray-600 mb-2"><i class="fas fa-map-marker-alt mr-1"></i>Marseille Airport</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span class="text-gray-600">4.2/5.0</span>
+                        </div>
+                        <div class="text-xl font-bold text-blue-600">€89.50</div>
+                    </div>
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">A/C</span>
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Manual</span>
+                    </div>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition duration-300">
+                        Select This Car
+                    </button>
+                </div>
+
+                <!-- Deal 5 - Alamo -->
+                <div class="deal-card bg-white rounded-lg card-shadow p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-lg font-semibold text-gray-800">Alamo</h4>
+                    </div>
+                    <div class="text-center mb-4">
+                        <i class="fas fa-car text-4xl text-blue-500 mb-2"></i>
+                        <p class="text-gray-600 mb-2">Compact - Nissan Micra</p>
+                    </div>
+                    <p class="text-gray-600 mb-2"><i class="fas fa-map-marker-alt mr-1"></i>Marseille City Center</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span class="text-gray-600">4.0/5.0</span>
+                        </div>
+                        <div class="text-xl font-bold text-blue-600">€91.20</div>
+                    </div>
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">A/C</span>
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Manual</span>
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">USB</span>
+                    </div>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition duration-300">
+                        Select This Car
+                    </button>
+                </div>
+
+                <!-- Deal 6 - Hertz -->
+                <div class="deal-card bg-white rounded-lg card-shadow p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-lg font-semibold text-gray-800">Hertz</h4>
+                    </div>
+                    <div class="text-center mb-4">
+                        <i class="fas fa-car text-4xl text-blue-500 mb-2"></i>
+                        <p class="text-gray-600 mb-2">Compact - Renault Clio</p>
+                    </div>
+                    <p class="text-gray-600 mb-2"><i class="fas fa-map-marker-alt mr-1"></i>Marseille City Center</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span class="text-gray-600">4.5/5.0</span>
+                        </div>
+                        <div class="text-xl font-bold text-blue-600">€95.80</div>
+                    </div>
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">A/C</span>
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Automatic</span>
+                    </div>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition duration-300">
+                        Select This Car
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter and Sort Options -->
+        <div class="max-w-6xl mx-auto mt-8">
+            <div class="bg-white rounded-lg card-shadow p-4">
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <span class="text-gray-600 font-medium">Sort by:</span>
+                        <select class="border border-gray-300 rounded px-3 py-1">
+                            <option>Price (Low to High)</option>
+                            <option>Price (High to Low)</option>
+                            <option>Rating</option>
+                            <option>Company</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-gray-600 font-medium">Filter:</span>
+                        <button class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Automatic</button>
+                        <button class="bg-gray-100 text-gray-700 px-3 py-1 rounded">Manual</button>
+                        <button class="bg-gray-100 text-gray-700 px-3 py-1 rounded">Airport</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Price Range Summary -->
+        <div class="max-w-4xl mx-auto mt-8">
+            <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4 text-center">💰 Price Range Summary</h3>
+                <div class="grid md:grid-cols-3 gap-4 text-center">
+                    <div>
+                        <div class="text-2xl font-bold text-green-600">€78.90</div>
+                        <div class="text-sm text-gray-600">Cheapest</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-blue-600">€89.20</div>
+                        <div class="text-sm text-gray-600">Average</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-red-600">€112.40</div>
+                        <div class="text-sm text-gray-600">Most Expensive</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Car Rental Deal Finder. 🚗 Happy travels!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add some interactivity
+        document.querySelectorAll('.deal-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Simulate button clicks
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                if (button.textContent.includes('Select This Car') || button.textContent.includes('Book Now')) {
+                    e.preventDefault();
+                    alert('🚗 Great choice! In a real app, this would redirect to the booking page.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
