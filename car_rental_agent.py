@@ -39,7 +39,8 @@ class CarRentalAgent:
                 "currency": "EUR",
                 "location": "Marseille Airport",
                 "rating": 4.2,
-                "features": ["Air Conditioning", "Manual Transmission"]
+                "features": ["Air Conditioning", "Manual Transmission"],
+                "booking_url": "https://www.europcar.com/car-rental/france/marseille"
             },
             {
                 "company": "Hertz",
@@ -48,7 +49,8 @@ class CarRentalAgent:
                 "currency": "EUR", 
                 "location": "Marseille City Center",
                 "rating": 4.5,
-                "features": ["Air Conditioning", "Automatic Transmission"]
+                "features": ["Air Conditioning", "Automatic Transmission"],
+                "booking_url": "https://www.hertz.com/car-rental/search/FMR/28-12-2024/30-12-2024/10:00/10:00"
             },
             {
                 "company": "Avis",
@@ -57,7 +59,8 @@ class CarRentalAgent:
                 "currency": "EUR",
                 "location": "Marseille Saint-Charles Station",
                 "rating": 4.1,
-                "features": ["Air Conditioning", "Manual Transmission", "GPS"]
+                "features": ["Air Conditioning", "Manual Transmission", "GPS"],
+                "booking_url": "https://www.avis.com/car-rental/search/FMR/28-12-2024/30-12-2024/10:00/10:00"
             },
             {
                 "company": "Enterprise",
@@ -66,7 +69,8 @@ class CarRentalAgent:
                 "currency": "EUR",
                 "location": "Marseille Airport",
                 "rating": 4.4,
-                "features": ["Air Conditioning", "Manual Transmission", "Bluetooth"]
+                "features": ["Air Conditioning", "Manual Transmission", "Bluetooth"],
+                "booking_url": "https://www.enterprise.com/car-rental/search/FMR/28-12-2024/30-12-2024/10:00/10:00"
             },
             {
                 "company": "Budget",
@@ -75,7 +79,8 @@ class CarRentalAgent:
                 "currency": "EUR",
                 "location": "Marseille City Center",
                 "rating": 3.9,
-                "features": ["Air Conditioning", "Manual Transmission"]
+                "features": ["Air Conditioning", "Manual Transmission"],
+                "booking_url": "https://www.budget.com/en/car-rental/search?PUC1=FMR&DRC1=FMR&PUDAY=28&PUMONTH=12&PUYEAR=2024&DODAY=30&DOMONTH=12&DOYEAR=2024&PUTIME=1000&DOTIME=1000"
             }
         ]
         
@@ -95,7 +100,8 @@ class CarRentalAgent:
                 "currency": "EUR",
                 "location": "Marseille Airport",
                 "rating": 4.3,
-                "features": ["Air Conditioning", "Automatic Transmission"]
+                "features": ["Air Conditioning", "Automatic Transmission"],
+                "booking_url": "https://www.sixt.com/car-rental/france/marseille/"
             },
             {
                 "company": "Alamo",
@@ -104,7 +110,8 @@ class CarRentalAgent:
                 "currency": "EUR",
                 "location": "Marseille City Center",
                 "rating": 4.0,
-                "features": ["Air Conditioning", "Manual Transmission", "USB Charging"]
+                "features": ["Air Conditioning", "Manual Transmission", "USB Charging"],
+                "booking_url": "https://www.alamo.com/car-rental/search/FMR/28-12-2024/30-12-2024/10:00/10:00"
             }
         ]
         
