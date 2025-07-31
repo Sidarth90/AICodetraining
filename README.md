@@ -123,4 +123,4 @@ This project is open source and available under the MIT License.
 
 For API-related issues, contact Supadata support at [supadata.ai](https://supadata.ai).
 
-For application issues, please open an issue in this repository. 
+For application issues, please open an issue in this repository.
